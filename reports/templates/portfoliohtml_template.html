@@ -1,0 +1,213 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Report</title>
+  <meta name="description" content="">
+</head>
+
+<body style="font-family: Arial;">
+
+  <header style="border-bottom: 1pt solid">
+    <table>
+      <tr>
+        <td style="width: 80px;">
+          <img src="{{organization_logo_path}}" alt="" style="width:1.73058in; height: 0.82131in;">
+        </td>
+        <td style="width:555px;">
+          <table style="width: 570px;">
+            <tr>
+              <td style="text-align: center;width: 350px;" >
+                <p1 style="text-align: center; font-weight: bold; font-size: 16pt;">{{label}}</p1>
+              </td>
+            
+              <td  style="width: 150px;">
+                <table>
+                  <tr>
+                    <td>
+                      <p style="font-size: 10pt;">Portfolio Date - <b>{{portfolio_date}}</b></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p style="font-size: 10pt;">Report Date - <b>{{current_date}}</b></p>
+                    </td>
+                  </tr>
+                </table>
+                
+              </td>
+            </tr>
+          </table>
+        </td>
+       
+      </tr>
+    </table>
+  </header>
+  <div>
+    <table class="pdf_table">      
+      <tr>
+        <td colspan="3">
+          <table>    
+            
+            {% if not is_historic %}        
+            <tr class="donotbreak">
+              <td  class="vertical_align" style="width: 220px;">
+                {{topholding_data_html}}
+
+              </td>
+              <td style="width: 220px;" class="vertical_align">
+                {{issuer_data_html}}
+              </td>
+              
+              <td class="vertical_align" style="width: 220px;">
+                {{sector_data_html}}
+
+              </td>
+            </tr>
+            
+            <tr class="donotbreak">
+              
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <td class="vertical_align" >
+                      <table>
+                        <tr>
+                          <th class="table_header" style="width: 220px;padding-top: 0px;
+                          padding-bottom: 0px;">
+                            <p>Instrument Type</p>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="{{instrument_type_chart_html}}"/> 
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="vertical_align" >
+                      <table>
+                        <tr>
+                          <th class="table_header" style="width: 220px;padding-top: 0px;
+                          padding-bottom: 0px;">
+                            <p>Market Cap</p>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="{{market_cap_chart_html}}"/> 
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td  class="vertical_align" >
+                      <table>
+                        <tr>
+                          <th class="table_header" style="width: 220px;padding-top: 0px;
+                          padding-bottom: 0px;">
+                            <p>Equity Style</p>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="{{equity_style_chart_html}}"/> 
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              
+            </tr>
+            <tr class="donotbreak">
+              
+              <td style="width:730px;" class="vertical_align" colspan="3">
+                <table style="width: 740px;">
+                  <tr>
+                    <th class="table_header" style="padding-top: 0px;
+                    padding-bottom: 0px;">
+                      <p>Geo Location</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{geo_allocation_data_html}}"/> 
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              
+            </tr>
+            {% endif %}
+            {% if is_historic %}      
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Sector Weights</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_sectorweights_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Instrument Type</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_instrumenttype_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>   
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Trend AUM</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_aum_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+                     
+            
+            <tr>
+              <td class="donotbreak" colspan="3" style="width: 700px;font-size: 9px;text-align: justify;">
+                <p style="text-align: justify;">{{disclaimer_text}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+    </table>
+    </td>
+    </tr>
+    </table>
+  </div>
+
+
+</body>
+
+</html>

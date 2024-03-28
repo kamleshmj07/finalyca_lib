@@ -1,0 +1,53 @@
+<div class="card_row">
+    <div class="card_column">
+        <div class="card">
+        <p5 class="font_size_7pt">Value As On:<br/>{{from_date_label}}</p5>
+        <br/>
+        <br/>
+        <P4>{{equity_old_value}}</P4>
+        </div>
+    </div>
+    <div class="card_column">
+        <div class="card">
+        <p5 class="font_size_7pt">Value As On:<br/>{{to_date_label}}</p5>
+        <br/>
+        <br/>
+        <P4>{{equity_new_value}}</P4>
+        </div>
+    </div>
+    <div class="card_column">
+        <div class="card">
+        <p5 class="font_size_7pt">Portfolio Abs Performance</p5>
+        <br/>
+        <br/>
+        <P4 class="{{ 'color_green' if equity_performance > 0 else 'color_red' }}">{{'%0.2f'| format(equity_performance|float)}}%</P4>
+        </div>
+    </div>
+    <div class="card_column">
+        <div class="card">                
+        <p5 class="font_size_7pt">Portfolio PE</p5>
+        <br/>
+        <br/>
+        <br/>
+        <P4 class="{{ 'color_green' if portfolio_pe > 0 else 'color_red' }}">{{'%0.2f'| format(portfolio_pe|float)}}</P4>
+        </div>
+    </div>
+    <div class="card_column">
+        <div class="card">
+        <p5 class="font_size_7pt">{{benchmark_name}}</p5>
+        <br/>
+        <br/>
+        
+        <P4 class="{{ 'color_green' if benchmark_performance > 0 else 'color_red' }}">{{'%0.2f'| format(benchmark_performance|float)}}%</P4>
+        </div>
+    </div>
+    <div class="card_column">
+        <div class="card">
+        <p5 class="font_size_7pt">{{etf_name}}</p5>
+        <br/>
+        <br/>
+        <br/>
+        <P4 class="{{ 'color_green' if etf_performance > 0 else 'color_red' }}">{{'%0.2f'| format(etf_performance|float)}}%</P4>
+        </div>
+    </div>
+</div>

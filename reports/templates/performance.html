@@ -1,0 +1,132 @@
+<table>
+    <tr>
+      <th class="custom_th" >
+        <p>Investment performance graph</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <table>                 
+            <tr>
+                <td style="width: 25px;">
+                  <div><div style='float: left; height: 3px; width: 7px; border-radius: 1px; border: 1px solid #153a6d; clear: both; background-color: #153a6d;'></div></div>
+                </td>
+                <td style="font-size: 5pt;">
+                  <p>Portfolio</p>
+                </td>
+                <td style="width: 25px;">
+                  <div><div style='float: left; height: 3px; width: 7px; border-radius: 1px; border: 1px solid #FF971A; clear: both; background-color: #FF971A;'></div></div>
+                </td>
+                <td style="font-size: 5pt;">
+                  <p>Benchmark</p>
+                </td>                     
+            </tr>
+         
+        </table>  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="{{performance_chart_src}}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table style="width: 400px;font-size: 6pt;line-height: 3px !important;">
+          <tr>
+            <td class="custom_th" style="font-weight: bold; width: 130px;">
+              <p>Trailing Returns*</p>
+            </td>
+            <td>
+              <p style="width: 30px;">1Mo</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>3Mo</p>
+            </td>
+            <td>
+              <p style=" width: 40px;">6 Mo</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>1Yr</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>3Yr</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>5Yr</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Portfolio Return</p>
+            </td>
+            <td>
+              <p style="width: 30px;">{{performance_values.scheme_ret_1m}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.scheme_ret_3m}}</p>
+            </td>
+            <td>
+              <p style=" width: 40px;">{{performance_values.scheme_ret_6m}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.scheme_ret_1y}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.scheme_ret_3y}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.scheme_ret_5y}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Benchmark Return</p>
+            </td>
+            <td>
+              <p style="width: 30px;">{{performance_values.bm_ret_1m}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.bm_ret_3m}}</p>
+            </td>
+            <td>
+              <p style=" width: 40px;">{{performance_values.bm_ret_6m}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.bm_ret_1y}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.bm_ret_3y}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.bm_ret_5y}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>+/-&nbsp;Benchmark&nbsp;Return</p>
+            </td>
+            <td>
+              <p style="width: 30px;">{{performance_values.active_1m}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.active_3m}}</p>
+            </td>
+            <td>
+              <p style=" width: 40px;">{{performance_values.active_6m}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.active_1y}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.active_3y}}</p>
+            </td>
+            <td style=" width: 40px;">
+              <p>{{performance_values.active_5y}}</p>
+            </td>
+          </tr>
+          
+        </table>
+      </td>
+    </tr>
+  </table>

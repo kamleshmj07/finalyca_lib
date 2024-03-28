@@ -1,0 +1,180 @@
+
+<table>
+    <tr>
+      <td  class="custom_th">
+        <p>Equity Style Box %</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr class="box_border">
+            {% if investment_style_data.large_cap_value>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.large_cap_value >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.large_cap_value>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}                    
+              <p class="custom_font_size">{{investment_style_data.large_cap_value|round|int}}</p>
+            </td>
+
+            {% if investment_style_data.large_cap_blend>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.large_cap_blend >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.large_cap_blend>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.large_cap_blend|round|int}}</p>
+            </td>
+
+            {% if investment_style_data.large_cap_growth>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.large_cap_growth >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.large_cap_growth>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.large_cap_growth|round|int}}</p>
+            </td>
+            <td>
+              <p  class="custom_font_size" style="transform: rotate(90deg);">Large</p>
+            </td>
+          </tr>
+
+          <tr class="box_border">
+            {% if investment_style_data.mid_cap_value>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.mid_cap_value >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.mid_cap_value>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.mid_cap_value|round|int}}</p>
+            </td>
+
+            {% if investment_style_data.mid_cap_blend>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.mid_cap_blend >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.mid_cap_blend>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.mid_cap_blend|round|int}}</p>
+            </td>
+
+            {% if investment_style_data.mid_cap_growth>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.mid_cap_growth >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.mid_cap_growth>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.mid_cap_growth|round|int}}</p>
+            </td>
+            <td>
+              <p  class="custom_font_size" style="transform: rotate(90deg);">Mid</p>
+            </td>
+          </tr>
+
+          <tr class="box_border">
+            {% if investment_style_data.small_cap_value>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.small_cap_value >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.small_cap_value>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.small_cap_value|round|int}}</p>
+            </td>
+
+            {% if investment_style_data.small_cap_blend>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.small_cap_blend >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.small_cap_blend>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.small_cap_blend|round|int}}</p>
+            </td>
+
+            {% if investment_style_data.small_cap_growth>50 %}
+            <td class="box_border box_td box_color_100">
+            {% elif investment_style_data.small_cap_growth >=26 %}
+            <td class="box_border box_td box_color_50">
+            {% elif investment_style_data.small_cap_growth>=11 %}
+              <td class="box_border box_td box_color_25">
+            {% else %}
+            <td class="box_border box_td box_color_10">
+            {% endif %}
+              <p class="custom_font_size">{{investment_style_data.small_cap_growth|round|int}}</p>
+            </td>
+            <td>
+              <p  class="custom_font_size" style="transform: rotate(90deg);">Small</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="custom_font_size">Value</p>
+            </td>
+            <td>
+              <p class="custom_font_size">Blend</p>
+            </td>
+            <td>
+              <p class="custom_font_size">Growth</p>
+            </td>
+          </tr>
+        </table>
+        <table style="border-collapse: collapse">
+          <tr>
+            <td class="box_color_td box_color_10"></td>
+            <td class="box_color_td box_color_25"></td>
+            <td class="box_color_td box_color_50"></td>
+            <td class="box_color_td box_color_100"></td>                    
+          </tr>
+          <tr>
+            <td class="box_color_td custom_font_size">0-10</td>
+            <td class="box_color_td custom_font_size">10-25</td>
+            <td class="box_color_td custom_font_size">25-50</td>
+            <td class="box_color_td custom_font_size">>50</td>
+          </tr>
+        </table>
+        
+      </td>
+      <td style="vertical-align: top;">
+        <table>
+          <tr>
+            <td>
+              <p class="custom_font_size">Total Stock Holdings</p>
+              <p class="custom_font_size">{{investment_style_total_securities}}</p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <p class="custom_font_size">Not Classified</p>
+              <p class="custom_font_size">{{investment_style_not_classified}}</p>
+            </td>
+          </tr>
+         
+        </table>
+      </td>
+    </tr>
+  </table>

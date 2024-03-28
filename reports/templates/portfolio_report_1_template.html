@@ -1,0 +1,498 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Report</title>
+  <meta name="description" content="">
+</head>
+
+<body>
+
+  <header class="custom_header_border">
+    <table>
+      <tr>
+        <td class="text_align_left" colspan="3">
+          <p1 class="custom_date_header">Release Date: {{report_date}}</p1>
+        </td>
+      </tr>
+      <tr>
+        <td class="custom_width_80px">
+          <img src="{{organization_logo_path}}" alt="" class="organization_logo">
+        </td>
+        <td class="text_align_center custom_width_330px">
+          <table class="custom_width_330px">
+            <tr>
+              <td class="text_align_center">
+                <p2 class="text_align_center font_weight_bold font_size_14pt">{{investor_details.label}}</p2>
+              </td>
+            </tr>
+            <tr>
+              <td class="text_align_center font_size_10pt" >
+                <p6  class="text_align_center">Pan no: {{investor_details.pan_no}}</p6>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td style="width: 250px;">
+          <table>
+            <tr>
+              <td>
+                <p6 class="text_align_center font_size_9pt" ><b> Portfolio Value: </b>{{equity_new_value}}</p6>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p6 class="text_align_center font_size_9pt"><b>Benchmark: </b>{{benchmark_name}}</p6>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </header>
+  <div>
+    <table class="portfolio_pdf_table">
+      <br/>
+      <tr>
+        <td colspan="3">
+          {{overview_html}}
+          <br/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="custom_th font_weight_bold title_background_color">
+          <p>&nbsp; Analysis: <span class="font_weight_lighter">{{portfolio_date_label}}</span> </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="vertical_align" >
+          {{instrument_type_html}}
+        </td>
+      
+        <td class="vertical_align" >
+          <table>
+            <tr>
+              <td>
+                {{equity_style_box_html}}
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <td  class="custom_th">
+                      <p>Fixed Income Style Box %</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table>
+                        <tr class="box_border">
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}                    
+                            <p class="custom_font_size"></p>
+                          </td>
+      
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+      
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+                          <td>
+                            <p  class="custom_font_size" style="transform: rotate(90deg);">High</p>
+                          </td>
+                        </tr>
+      
+                        <tr class="box_border">
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+      
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+      
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+                          <td>
+                            <p  class="custom_font_size" style="transform: rotate(90deg);">Med</p>
+                          </td>
+                        </tr>
+      
+                        <tr class="box_border">
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+      
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+      
+                          {% if 0>50 %}
+                          <td class="box_border box_td box_color_100_fi">
+                          {% elif 0 >=26 %}
+                          <td class="box_border box_td box_color_50_fi">
+                          {% elif 0>=11 %}
+                            <td class="box_border box_td box_color_25_fi">
+                          {% else %}
+                          <td class="box_border box_td box_color_10_fi">
+                          {% endif %}
+                            <p class="custom_font_size"></p>
+                          </td>
+                          <td>
+                            <p  class="custom_font_size" style="transform: rotate(90deg);">Low</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="custom_font_size">Ltd</p>
+                          </td>
+                          <td>
+                            <p class="custom_font_size">Mod</p>
+                          </td>
+                          <td>
+                            <p class="custom_font_size">Ext</p>
+                          </td>
+                        </tr>
+                      </table>
+                      <table style="border-collapse: collapse">
+                        <tr>
+                          <td class="box_color_td box_color_10_fi"></td>
+                          <td class="box_color_td box_color_25_fi"></td>
+                          <td class="box_color_td box_color_50_fi"></td>
+                          <td class="box_color_td box_color_100_fi"></td>                    
+                        </tr>
+                        <tr>
+                          <td class="box_color_td custom_font_size">0-10</td>
+                          <td class="box_color_td custom_font_size">10-25</td>
+                          <td class="box_color_td custom_font_size">25-50</td>
+                          <td class="box_color_td custom_font_size">>50</td>
+                        </tr>
+                      </table>
+                      
+                    </td>
+                    <td style="vertical-align: top;">
+                      <table>
+                        <tr>
+                          <td>
+                            <p class="custom_font_size">Total Bond Holdings</p>
+                            <p class="custom_font_size">-</p>
+                          </td>
+                        </tr>
+                        
+                        <tr>
+                          <td>
+                            <p class="custom_font_size">Not Classified</p>
+                            <p class="custom_font_size">-</p>
+                          </td>
+                        </tr>
+                       
+                      </table>
+                    </td>
+                  </tr>
+                </table
+              </td>
+            </tr>
+          </table>
+          
+        </td>
+        
+      </tr>
+      <tr>        
+        <td colspan="2" class="custom_th title_background_color font_weight_bold">
+          <p>&nbsp; Performance: <span class="font_weight_lighter">{{portfolio_date_label}}</span> </p>
+        </td>
+      </tr>
+      <tr class="vertical_align">
+        <td class="vertical_align">
+          {{geo_allocation_html}}
+        </td>
+        <td>
+          {{investment_performance_html}}
+        </td>
+        
+      </tr>
+      <tr>
+        <td colspan="2" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+          <p>&nbsp; Holdings: <span style="font-weight: lighter;">{{portfolio_date_label}}</span> </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{custom_holding}}
+          
+        </td>
+        
+      </tr>
+      
+      <tr class="breakpage">
+        
+        <td colspan="2" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+          <p>&nbsp; Analysis: <span style="font-weight: lighter;">{{portfolio_date_label}}</span> </p>
+        </td>
+      </tr>
+      <tr class="donotbreak">
+        <td class="vertical_align" >
+          {{sector_weight_html}}
+        </td>
+        <td class="vertical_align" >
+          {{issuer_weight_html}}
+          
+        </td>
+      </tr>
+      <tr>        
+        <td colspan="2" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+          
+        </td>
+      </tr>
+      <tr class="donotbreak vertical_align donotbreak">
+        <td class="vertical_align"  >
+          {{equity_style_html}}
+        </td>
+        <td class="vertical_align"  >
+          {{market_cap_html}}
+        </td>
+      </tr>
+      
+      {% if not hide_trend_analysis %}
+        {% if trend_count>1 %}
+        <tr class={{page_break_class}}>
+          <td colspan="2">
+            <table>
+              
+              <tr>        
+                <td colspan="2" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+                  <p>&nbsp;Trend Analysis: <span style="font-weight: lighter;">{{portfolio_date_label}}</span> </p>
+                </td>
+              </tr>
+              <tr class="donotbreak">
+                <td colspan="2">
+                  <table style="width: 750px;">
+                    <tr>
+                      <td class="custom_th">
+                        <p>Sector Weights</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="{{trend_analysis_sectorweights_historical_data_html}}">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              
+              <tr class="donotbreak">
+                <td colspan="2">
+                  <table style="width: 750px;">
+                    <tr>
+                      <td class="custom_th">
+                        <p>Instrument type</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="{{trend_analysis_instrumenttype_historical_data_html}}">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr> 
+              <tr class="donotbreak">
+                <td colspan="2">
+                  <table style="width: 750px;">
+                    <tr>
+                      <td class="custom_th">
+                        <p>Trend AUM</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="{{trend_analysis_aum_data_html}}">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% else %}
+        <tr class={{page_break_class}}>
+          <td colspan="2">
+            <table>            
+              <tr>        
+                <td colspan="3" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+                  <p>&nbsp;Trend Analysis: <span style="font-weight: lighter;">{{portfolio_date_label}}</span> </p>
+                </td>
+              </tr>
+              <tr style="vertical-align: top;">
+                <td style="width: 250px;">
+                  <table>
+                    <tr>
+                      <td style="font-size: 6pt; font-weight: bold;">Sector Weights</td>
+                      <td style="font-size: 6pt; font-weight: bold;">Wts (%)</td>
+                    </tr>                  
+                      {% for item in sector_weight_value %}          
+                      <tr style="line-height: 7px !important;">                       
+                          <td style="font-size: 6pt;">
+                            <p style="margin-top: 3px;margin-bottom: 3px;">{{item.title}}</p>
+                          </td>                        
+                          <td class="custom_font_size">
+                            <p style="margin-top: 3px;margin-bottom: 3px;">{{item.value}}</p>
+                          </td>                       
+                      </tr>
+                    {% endfor %}                  
+                  </table>
+                </td>
+                <td style="width: 250px;vertical-align: top;">
+                  <table>
+                    <tr>
+                      <td style="font-size: 6pt; font-weight: bold;">Instrument Type</td>
+                      <td style="font-size: 6pt; font-weight: bold;">Wts (%)</td>
+                    </tr>                  
+                      {% for item in instrument_type_portfolio_value %}                
+                      <tr style="line-height: 7px !important;">                       
+                          <td style="font-size: 6pt;">
+                            <p style="margin-top: 3px;margin-bottom: 3px;">{{item.title}}</p>
+                          </td>                        
+                          <td class="custom_font_size">
+                            <p style="margin-top: 3px;margin-bottom: 3px;">{{item.value}}</p>
+                          </td>                       
+                      </tr>
+                    {% endfor %}                  
+                  </table>
+                </td>
+                <td style="width: 235px;vertical-align: top;">
+                  <table>
+                    <tr>
+                      <td style="font-size: 6pt; font-weight: bold;width: 70px;">Trend AUM</td>
+                      <td style="font-size: 6pt; font-weight: bold;width: 90px;">₹</td>
+                    </tr>
+                    
+                    <tr style="line-height: 7px !important;">                       
+                        <td style="font-size: 6pt;">
+                          <p>{{trend_aum_date}}</p>
+                        </td>                        
+                        <td style="font-size: 6pt;">
+                          <p>{{trend_aum_value}}</p>
+                        </td>                       
+                    </tr>
+                                
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% endif %}
+      {% endif %}
+      
+      {% if not hide_performance %}
+      <tr class={{page_break_class}}>        
+        <td colspan="2" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+          <p>&nbsp;Performance of Underlyings from:{{from_date_label}} to:{{to_date_label}} </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{portfolio_performance_analysis}}
+        </td>
+      </tr>
+      {% endif %}
+
+      {% if not hide_stock_details %}
+      <tr class={{page_break_class}}>        
+        <td colspan="2" class="custom_th" style="background-color: #c4c4c4a6;font-weight: bold;">
+          <p>&nbsp;Stock Details: <span style="font-weight: lighter;">{{portfolio_date_label}}</span> </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          {{stock_nested_holding_data}}             
+           
+        </td>
+      </tr>
+      {% endif %}
+      
+      
+      
+
+      <tr>
+        <td class="donotbreak" colspan="2" style="width: 650px;font-size: 6pt;text-align: justify;">
+          <br/>
+          <br/>
+          <br/>
+          <p style="text-align: justify;">{{organization_whitelabel_data.disclaimer}}</p>
+        </td>
+      </tr>
+      </table>
+  </div>
+
+
+</body>
+
+</html>

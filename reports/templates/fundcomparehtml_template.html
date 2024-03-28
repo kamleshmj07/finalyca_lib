@@ -1,0 +1,297 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Report</title>
+    <meta name="description" content="">
+  </head>
+
+  <body style="font-family: Arial;">
+    <style>
+      @page {
+        size: A4 landscape !important; 
+      }
+    </style>
+    <link rel="stylesheet" href="D:\finalyca_dev\backend\src\templates\css\report.css">
+  <header>
+    <table style="width: 800px;">
+      <tr>
+        <td style="width: 80px;">
+          <img src="{{organization_logo_path}}" alt="" style="width:1.73058in; height: 0.82131in;">
+        </td>
+        <td style="text-align: center;">
+          <p><b>Fund Compare</b></p>
+        </td>
+      </tr>
+    </table>  
+</header>  
+  <div>
+    <table>
+      <tr>
+        <td style="vertical-align: top;width: 140px;">
+          <table class="pdf_table_container " style="width: 140px;">
+            <tr >
+              <td class="pdf_table_container_td1" style="height: 81.5px;">
+                <p>AMC</p>
+              </td>
+            </tr>
+            <tr >
+              <td class="pdf_table_container_td1">
+                <p>Product Name</p>
+              </td>
+            </tr>
+            <tr class="pdf_table_container_td1" style="height: 41px;">
+              <td>
+                <p>Fund Name</p>
+              </td>
+            </tr>
+            <tr class="pdf_table_container_td1">
+              <td>
+                <p>As On Date</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>NAV</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Net Assets (Cr.) </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Inception Date</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1" style="height: 60px;">
+                <p>Risko Meter</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1" style="height: 53px;">
+                <p>Fund Manager</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1" style="height: 38px;">
+                <p>Classification</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1" style="height: 38px;">
+                <p>Benchmark</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Expense Ratio (%)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Min Investment</p>
+              </td>
+            </tr>
+            <tr >
+              <td class="pdf_table_container_td1" style="height: 75px">
+                <p>Exit Load</p>
+              </td>
+            </tr>
+            <tr class="breakpage">
+              <td class="pdf_table_container_td1" style="height: 160px;">
+                <p>Fees Structure</p>
+              </td>
+            </tr>
+            
+            <tr>
+              <td class="pdf_table_container_th1" >
+                <p>Trailing Returns</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>1-Month</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>3-Month</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>6-Month</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>1-Year</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>3-Year</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>5-Year</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Since Inception</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_th1" >
+                <p>Composition (%)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Equity</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Debt</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Cash</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1" style="height: 225px;">
+                <p></p>
+              </td>
+            </tr>
+            <tr class="breakpage">
+              <td class="pdf_table_container_th1" >
+                <p>Mkt Cap Comp (%)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Large Cap</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Mid Cap</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Small Cap</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Unlisted</p>
+              </td>
+            </tr>
+            
+            <tr>
+              <td class="pdf_table_container_td1 breakpage" style="height: 430px">
+                <p>Top Holding (%)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_th1">
+                <p>Portfolio Characteristics</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Total Stocks</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Avg Mkt Cap (Rs.Cr)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Portfolio P/E Ratio </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_th1">
+                <p>Risk Analysis</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Standard Deviation </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Sharpe Ratio</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Beta</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>R-Square</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Treynor Ratio</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Alpha</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="pdf_table_container_td1">
+                <p>Modified Duration</p>
+              </td>
+            </tr>
+            <tr class="breakpage">
+              <td class="pdf_table_container_td1" style="height: 450px;">
+                <p>Sector Weights</p>
+              </td>
+            </tr>
+            
+            
+          </table>
+        </td>
+        <td style="vertical-align: top;width:210px;">
+          {{fund_1_html}}
+        </td>
+        <td style="vertical-align: top;width:210px;">
+          {{fund_2_html}}
+        </td>
+        <td style="vertical-align: top;width:210px;">
+          {{fund_3_html}}
+        </td>
+        <td style="vertical-align: top;width:210px;">
+          {{fund_4_html}}
+        </td>
+      </tr>
+      <tr> 
+        <td class="donotbreak" colspan="5" style="width: 780px;font-size: 9px;text-align: justify;padding: 15px;">
+          <p style="text-align: justify;">{{disclaimer_text}}</p>
+        </td>
+      </tr>
+    </table>
+    
+  </div>
+
+    
+  </body>
+</html>

@@ -1,0 +1,343 @@
+<table class="pdf_table_container" style="width: 200px;">
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 81.5px;">
+            <img src="{{amc_imagepath}}" alt="" style="width:1.73058in; height: 0.82131in;">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{product_code}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 38px;">
+         <p>{{plan_name}}</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{asondate}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{nav}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{aum}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{inception_date}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 60px;">
+            {% if risk_grade == "NA" %}
+            <p>NA</p>
+            {% else %}
+            <img src="{{risk_grade_image}}" style="width: 1in; height: 0.6in;">
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 53px;">
+         <p>{% for i in fund_manager %}{% if loop.index0 != 0 %}, {% endif %}{{i.fund_manager_name}}{% endfor %}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 38px;">
+         <p>{{classification}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 38px;">
+         <p>{{benchmark_name}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{expense_ratio}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+         <p>{{min_investment}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 75px">
+         <p>{{exit_load}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td breakpage"  style="height: 160px;">
+         <p>{{fee_structure}}</p>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="pdf_table_container_th1">
+            <p>Fund&nbsp;(%)</p>
+        </td>
+        <td class="pdf_table_container_th1">
+            <p>Benchmark&nbsp;(%)</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_1m}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_1m}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_3m}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_3m}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_6m}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_6m}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_1y}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_1y}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_3y}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_3y}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_5y}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_5y}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td">
+            <p>{{returns.scheme_ret_ince}}</p>
+        </td>
+        <td class="pdf_table_container_td">
+            <p>{{returns.bm_ret_ince}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_th1" colspan="2" style="height: 21px;">
+            
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td" colspan="2" style="width: 120px;">
+            <p>{{composition.equity}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td" colspan="2">
+            <p>{{composition.debt}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td" colspan="2">
+            <p>{{composition.cash}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td" style="height: 225px;">
+            <img src="{{composition_chart_src}}" >
+        </td>
+    </tr>
+    
+<!-- 
+    <tr class="breakpage">
+        <td class="pdf_table_container_th1" >
+            <p>Secuirty Name</p>
+        </td>
+        <td class="pdf_table_container_th1" >
+            <p>Wts (%)</p>
+        </td>
+    </tr> -->
+    <tr class="breakpage">
+        <td class="pdf_table_container_th1" style="height: 21px;" colspan="2">
+        </td>
+    </tr>
+            
+    <tr>
+        <td class="pdf_table_container_td" colspan="2">
+            <p>{{marketcap_composition.large_cap}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td" colspan="2">
+            <p>{{marketcap_composition.mid_cap}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td" colspan="2">
+            <p>{{marketcap_composition.small_cap}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_td" colspan="2">
+            <p>{{marketcap_composition.unlisted}}</p>
+        </td>
+    </tr>
+
+    <tr>
+    <td colspan="2" style="vertical-align: top;height: 430px;">
+        <table class="dataframe1">
+            <tr>
+                <td class="pdf_table_container_th2" style="width: 120px;">
+                    <p>Security Name</p>
+                </td>
+                <td class="pdf_table_container_th2" >
+                    <p>Wts&nbsp;(%)</p>
+                </td>
+            </tr>
+                {% for i in fund_holdings %}    
+                <tr>
+                    <td class="pdf_table_container_td2" style="text-align: left;">
+                        <p>{{i.security_name}} </p>
+                    </td>
+                    <td class="pdf_table_container_td2" style="width: 90px">
+                        <p>{{i.security_weight}} </p>
+                    </td>
+                </tr>   
+                {% endfor %}
+        </table>
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="2" class="pdf_table_container_th1" style="height: 22px;">
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+            <p>{{portfolio_characteristics.total_stocks}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+            <p>{{portfolio_characteristics.avgmktcap_rs_cr}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="pdf_table_container_td">
+            <p>{{portfolio_characteristics.portfoliop_eratio}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdf_table_container_th1">
+            <p>1 Year</p>
+        </td>
+        <td class="pdf_table_container_th1">
+            <p>3 Year</p>
+        </td>
+    </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.standard_deviation_1_y}}</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.standard_deviation_3_y}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.sharpe_ratio_1_y}}</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.sharpe_ratio_3_y}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.beta_1_y}}</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.beta_3_y}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.r_square_1_y}}</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.r_square_3_y}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.treynor_ratio_1_y}}</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.treynor_ratio_3_y}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.alpha_1_y}}</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>{{risk_analysis.alpha_3_y}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pdf_table_container_td">
+                <p>NA</p>
+            </td>
+            <td class="pdf_table_container_td">
+                <p>NA</p>
+            </td>
+        </tr>
+    
+                
+    <tr class="breakpage">
+        <td colspan="2" style="vertical-align: top;" >
+            <table class="dataframe1">
+                <tr>
+                    <td class="pdf_table_container_th2" style="width: 172px;">
+                        <p>Sectors</p>
+                    </td>
+                    <td class="pdf_table_container_th2" >
+                        <p>Wts&nbsp;(%)</p>
+                    </td>
+                </tr>
+                {% for i in sector %}    
+                <tr>
+                    <td class="pdf_table_container_td2" style="text-align: left;">
+                        <p>{{i.sector_name}} </p>
+                    </td>
+                    <td class="pdf_table_container_td2">
+                        <p>{{i.sector_weight}} </p>
+                    </td>
+                </tr>   
+                {% endfor %}
+        </table>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,62 @@
+<table style="width: 750px;font-size: 6pt;line-height: 6px !important;" >
+    <thead>
+      <tr style="line-height: 8px !important;">
+        <th class="custom_th" style="font-weight: bold; width: 190px;">
+          <p>Company</p>
+        </th>
+        
+        <th style="font-weight: bold; width: 50px;text-align: right;">
+          <p>Price as on:{{from_date_label}}</p>
+        </th>
+        <th style="font-weight: bold; width: 60px;text-align: right;"><p>Units</p>
+        </th>
+        <th style="font-weight: bold; width: 80px;text-align: right;">
+          <p>Value as on:<br/>{{from_date_label}}</p>
+        </th>
+        <th style="font-weight: bold; width: 50px;text-align: right;">
+          <p>Price as on:<br/>{{to_date_label}}</p>
+        </th>
+        <th style="font-weight: bold; width: 80px;text-align: right;">
+          <p>Value as on:<br/>{{to_date_label}}</p>
+        </th>
+        <th style="font-weight: bold; width: 50px;text-align: right;">
+          <p>Weight&nbsp;₹</p>
+        </th>
+        <th style="font-weight: bold; width: 50px;text-align: right;">
+          <p>Absolute %</p>
+        </th>
+        
+      </tr>
+    </thead>
+    
+    {% for item in portfolio_performance_analysis %}                
+      <tr style="line-height: 7px !important; border-bottom: 1pt solid black !important;" >
+        <td>
+          <p>{{item.name}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.start_unit_price}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.units}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.start_price}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.end_unit_price}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.end_price}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.weight}}</p>
+        </td>
+        
+        <td style="text-align: right;">
+          <p>{{item.change_pr}}</p>
+        </td>
+       
+      </tr>
+    {% endfor %}
+  </table>

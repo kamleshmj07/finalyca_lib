@@ -1,0 +1,39 @@
+<table>
+    <tr>
+      <td>                
+      </td>
+      <td rowspan="2" style="width: 180px;">
+        <table>
+          <tr>
+            <td class="custom_th" colspan="2">
+              <p>{{title}}</p>
+            </td>
+            
+            <td style="font-size: 6pt;">
+              <p>Portfolio&nbsp;Net&nbsp;%</p>
+            </td>                    
+          </tr>
+          {% for item in data %}                
+            <tr style="line-height: 7px !important;">
+                <td style="width: 25px;">
+                  <div><div style='float: left; height: 7px; width: 7px; border-radius: 5px; border: 1px solid {{item.color_code}}; clear: both; background-color: {{item.color_code}};'></div></div>
+                </td>
+                <td style="font-size: 6pt;">
+                  <p style="margin-top: 3px;margin-bottom: 3px;">{{item.title}}</p>
+                </td>
+                
+                <td class="custom_font_size">
+                  <p style="margin-top: 3px;margin-bottom: 3px;">{{item.value}}</p>
+                </td>
+               
+            </tr>
+          {% endfor %}
+        </table>  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="{{donut_chart_html}}"/> 
+      </td>
+    </tr>
+</table>

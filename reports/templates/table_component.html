@@ -1,0 +1,22 @@
+
+<table class="dataframe" style="width: {{table_width}}px">
+    <tr>
+    {% for i in header_list %}    
+        <th class="table_header">{{i}}</th>    
+    {% endfor %}
+    </tr>
+    {% for value in data_dict %}    
+    <tr>    
+        {% for i in header_list %}   
+            <td style="text-align: {{'right' if value[i]|float != 0 or value[i] is none or value[i] == 'NA' else 'left' }};">
+                 {{value[i] if value[i] is not none else 'NA' }}</td>
+            {% endfor %}
+    </tr>
+    {% endfor %}    
+</table>
+
+
+
+
+
+

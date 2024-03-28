@@ -1,0 +1,38 @@
+<table style="width: 750px;font-size: 6pt;line-height: 3px !important;">
+    <tr>
+      <td class="custom_th" style="font-weight: bold; width: 400px;">
+        <p>Top {{holdings_securities_shown}} holdings out of {{holdings_total_securities}}</p>
+      </td>
+      <td>
+        <p style="font-weight: bold; width: 90px;">Symbol</p>
+      </td>
+      <td style="font-weight: bold; width: 90px;">
+        <p>Asset Class</p>
+      </td>
+      <td>
+        <p style="font-weight: bold; width: 90px;text-align: right;">Holding Value</p>
+      </td>
+      <td style="font-weight: bold; width: 50px;text-align: right;">
+        <p>% Assets</p>
+      </td>
+    </tr>
+    {% for item in holdings_value %}                
+      <tr>
+        <td >
+          <p>{{item.name}}</p>
+        </td>
+        <td>
+          <p>{{item.isin}}</p>
+        </td>
+        <td>
+          <p>{{item.asset_class}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{item.total_price}}</p>
+        </td>
+        <td style="text-align: right;">
+          <p>{{'%0.2f'| format(item.weight|float)}}</p>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>

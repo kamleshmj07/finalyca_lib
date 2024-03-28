@@ -1,0 +1,857 @@
+@page {
+
+	size: A4 portrait;
+	margin: 1cm 0.5cm 1cm 0.5cm; 
+/* 
+	@top-left-corner {
+		content: ""; 
+		background-color: #53c963;
+		border-bottom: solid #E4813B; 
+	} */
+/* 
+	@top-left {
+		width: 70%;
+		content: "";
+		background: url('images/logo_v4.png'), rgba(42, 201, 80, 0.220);
+		background-repeat: no-repeat, repeat;
+		background-position: left center, left;
+		background-size: contain; 
+		border-bottom: solid #53c963;
+	}  */
+/* 
+	@top-right {
+		width: 30%;
+		content: "Finalyca Header";
+		vertical-align: middle; 
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 0.7cm;
+		color: white;
+		text-align: center;
+		background-color: #53c963;
+		border-bottom: solid green;
+		} */
+
+	
+
+  @bottom-right-corner {
+		content: " "; 
+		border-top: solid; 		
+	}
+  @bottom-left-corner {
+		content: " "; 
+		border-top: solid; 		
+	}
+
+	@bottom-left {
+		width: 70%;
+		content: "";
+		background-repeat: no-repeat, repeat;
+		background-position: left center, left;
+		background-size: contain; /* 5cm, cover or 100%: scale bg image, retains img ratio */ 
+		
+	} 
+  @bottom-right {
+		width: 30%;
+		content: "Page " counter(page) " of " counter(pages);
+		vertical-align: middle; 
+		font-family: sans-serif;
+		font-size: 9pt;
+		color: black;
+		text-align: right;
+		
+		}
+
+
+	@bottom-center {
+		width: 100%;
+		content: "Powered By Finalyca";
+		vertical-align: middle; 
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 10pt;
+    border-top: solid;
+		
+	}
+
+}
+
+@media all {
+
+	.section-title {
+		color: black;
+		font-weight: bold;
+		text-align: left;
+		clear: both;
+	}
+	
+	.box-container-title {
+		width: 100%;
+		background: #53c963;
+		color: black;
+		font-weight: bold;
+		text-align: left;
+	}	
+	
+	.container-title {
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+	
+}
+
+@media print {
+	
+  html, body {
+		font-family: Arial;
+		background: none;
+		color: black;
+	}
+	.section-title {
+		font-size: 0.7cm;
+		padding-top: 0.17cm;
+		margin-top: 0.5cm;
+		margin-bottom: 0.2cm;
+	}
+	
+	.box-container-title {
+		height: 0.6cm;
+		font-size: 0.5cm;
+		padding-bottom: 0.12cm;
+		margin-bottom: 0.2cm;
+	}
+	.container-title {
+		padding-top: 0.17cm;
+		padding-left: 0.2cm;
+	}
+	
+}	
+
+@media screen {
+	html, body {
+		font-family: sans-serif;
+		background: none;
+		color: black;
+	}
+	
+	.section-title {
+		font-size: 1em;
+		text-align: left;
+		padding-top: 0.1em;
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
+	}
+	
+	.box-container-title {
+		height: 20px;
+		background: rgba(255, 127, 42, 0.75);
+		font-size: 0.9em;
+		margin-bottom: 0.2em;
+		font-size: 0.9em;
+		margin-bottom: 0.2em;
+	}	
+	.container-title {
+		padding-top: 0.1em;
+		padding-left: 0.2em;
+	}
+	
+}
+
+.pdf_table{
+  width:680px;
+  font-size: 9pt;
+}
+
+.custom_html_from_dataframe{
+  width: 95%;
+  table-layout: fixed;
+}
+
+.portfolio_pdf_table{
+  width:700px;
+  font-size: 9pt;
+}
+
+.pdf_table_td_title{
+  width:120px; 
+  font-weight: bold;
+  
+}
+
+.pdf_table_td_value{
+  width:510px; 
+  
+}
+
+.pdf_table_container{  
+  width: 740px;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  
+}
+
+.pdf_table_container_th{
+  padding-left: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  background-color: #48a6dc;
+  color: white;
+}
+
+.pdf_table_container_tr{
+  font-size: 9pt;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  
+}
+.pdf_table_container_tr1{
+  font-size: 9pt;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  text-align: center;
+  vertical-align: middle !important;
+  border: solid;
+  border-width: thin;  
+  }
+
+  .pdf_table_container_th1{
+	font-size: 9pt;
+	border-collapse: collapse;
+	border-color: #48a6dc;
+	text-align: center;
+	vertical-align: middle !important;
+	border: solid;
+	border-width: thin;  
+	background-color: #48a6dc;
+	}
+
+	.pdf_table_container_th2{
+		font-size: 9pt;
+		border-collapse: collapse;
+		border-color: #48a6dc;
+		text-align: center;
+		vertical-align: middle !important;
+		border: solid;
+		border-width: thin;  
+		background-color: #48a6dc;
+		font-weight: 100;
+		}
+	.pdf_table_overlap{
+		border-style: solid;
+		border-width: thin;
+		border-collapse: collapse;
+		border-color: #48a6dc;
+		text-align: center;
+		width: 295px;
+	}
+	.pdf_table_overlap_td{
+	font-size: 9pt;
+    border-collapse: collapse;
+    border-color: #48a6dc;
+    text-align: center;
+    vertical-align: middle !important;
+    border: solid;
+    border-width: thin;
+    font-weight: 100;
+	}
+
+.pdf_table_container_td{
+  font-size: 9pt;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  text-align: center;
+  
+}
+
+.pdf_table_container_td1{
+	font-size: 9pt;
+	border-style: solid;
+	border-width: thin;
+	border-collapse: collapse;
+	border-color: #48a6dc;
+	text-align: center;
+	font-weight: 500;
+	
+  }
+
+  .pdf_table_container_td2{
+	font-size: 9pt;
+	text-align: center;
+	font-weight: 500;
+	
+  }
+
+
+p{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.bold_p{
+  font-weight: bold;
+  font-size: 9pt;
+}
+
+.float_right{
+  text-align: left;
+}
+
+.even{
+  background-color: #eef6fc;
+}
+
+.dataframe thead tr th{
+  padding-left: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  background-color: #48a6dc;
+  color: white;
+}
+
+
+.table_header{
+  padding-left: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-collapse: collapse;
+  border-color: #48a6dc;
+  background-color: #48a6dc;
+  color: white;
+  text-align: left;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.dataframe table{
+  font-size: 9pt;
+}
+
+.donotbreak{
+	break-inside:avoid-page;
+}
+
+.breakpage{
+	page-break-before: always;
+}
+
+
+
+.dataframe thead tr th{
+  width: 100%;
+  text-align: left !important;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.dataframe thead tr{
+  text-align: left !important;
+  
+}
+
+.dataframe thead tr td{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.dataframe tbody tr td{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.dataframe tbody tr:nth-child(even) 
+{
+  background-color: #eef6fc;
+}
+
+.dataframe1 tbody tr:nth-child(even) 
+{
+  background-color: #eef6fc;
+}
+
+.vertical_align{
+  vertical-align: top;
+}
+
+.orange_color{
+	background-color:#ec8d4a;
+}
+
+#circle-wrapper {
+    position: relative;
+    top: 33px;
+    /* left: -80px; */
+    height: 200px;
+    width: 430px;
+}
+
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
+    position: absolute;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    padding-bottom: 20%;
+}
+
+.circle1 {
+    background-color: #4fc698;
+    margin-top: -7%;
+    left: 35%;
+}
+
+.circle2 {
+    margin-top: 10%;
+    left: 50%;
+    background-color: #51aafa;
+}
+
+.circle3 {
+    margin-top: 24%;
+    left: 10%;
+    background-color: #444;
+}
+
+.circle4 {
+    margin-top: 10%;
+    left: 20%;
+    background-color: #e85d5f;
+}
+
+.transparent_class {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+
+.wrappertxtxcircle {
+    margin-top: 30%;
+    /* margin-left: 32%; */
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.wrappertxtxcircle2 {
+	margin-top: 50%;
+    margin-left: 14%;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.wrappertxtxcircle3 {
+	margin-top: 50%;
+    margin-left: 14%;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.wrappertxtxcircle h1.commonstock {
+    font-size: 14px;
+    top: -32px;
+    position: relative;
+}
+
+.wrappertxtxcircle h1 {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.wrappertxtxcircle h1 span.schemeatxt {
+    font-size: 16px;
+    position: relative;
+    top: -56px;
+    right: 90px;
+}
+
+.wrappertxtxcircle h1 span.schembatxt {
+    font-size: 16px;
+    position: relative;
+    top: -56px;
+    right: -26px;
+}
+
+.wrappertxtxcircle2 h1.commonstock {
+    font-size: 14px;
+    top: -32px;
+    position: relative;
+}
+
+.wrappertxtxcircle2 h1 {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.wrappertxtxcircle2 h1 span.schemeatxt {
+    font-size: 14px;
+    position: relative;
+    top: -35px;
+    right: 72px;
+}
+
+.wrappertxtxcircle2 h1 span.schembatxt {
+    font-size: 14px;
+    position: relative;
+    top: -56px;
+    right: -26px;
+}
+
+.wrappertxtxcircle3 h1.commonstock {
+    font-size: 14px;
+    top: -32px;
+    position: relative;
+}
+
+.wrappertxtxcircle3 h1 {
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.wrappertxtxcircle3 h1 span.schemeatxt {
+    font-size: 14px;
+    position: relative;
+    top: -35px;
+    right: 5px;
+}
+
+.wrappertxtxcircle3 h1 span.schembatxt {
+    font-size: 14px;
+    position: relative;
+    top: -56px;
+    right: -26px;
+}
+
+.bg_accent_organge {
+    background-color: #E4813B !important;
+	color: white;
+	border-color: black;
+}
+
+.bg_accent_blue {
+  background-color: #364EB9 !important;
+	color: white;
+	border-color: black;
+}
+
+.bg_green {
+  background-color: green !important;
+	color: white;
+	border-color: black;
+}
+
+.bg_accent_pink {
+    background-color: #e85d5f !important;
+	color: white;
+	border-color: black;
+}
+
+.overlap_td{
+	width: 130px;background-color: white !important; color: black; font-weight: bold;
+}
+
+
+/* Float four columns side by side */
+.card_column {
+  float: left;
+  width: 15%;
+  padding: 0 5px;  
+}
+
+/* Remove extra left and right margins, due to padding */
+.card_row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.card_row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  text-align: center;
+  background-color: #dbeaff;
+  height: 60px;
+  border-radius: 20px 20px;
+  border: 0.5px solid #99c0fa;
+}
+
+.color_green{
+  color: #279203;
+}
+
+.color_red{
+  color: red;
+}
+
+.box_border{
+  border: 0.5px solid black;border-collapse: collapse;
+}
+
+.box_td{
+  width: 25px;height: 30px;text-align: center;vertical-align:middle;border-collapse: collapse;
+}
+
+.box_color_td{
+  width: 25px;height: 10px;text-align: center;vertical-align:middle;font-size: smaller;
+}
+
+.box_color_10{
+  background-color: #d2dbe9;
+}
+
+.box_color_25{
+  background-color: #b8d4fb;
+}
+
+.box_color_50{
+  background-color: #6b8dbe;
+  color: whitesmoke;
+}
+
+.box_color_100{
+  background-color: #245396;
+  color: whitesmoke;
+}
+
+
+.box_color_10_fi{
+  background-color: #e8e5bc;
+}
+
+.box_color_25_fi{
+  background-color: #f0eb98;
+}
+
+.box_color_50_fi{
+  background-color: #cfc95a;
+}
+
+.box_color_100_fi{
+  background-color: #bdb50c;
+}
+
+.custom_th{
+  font-size: 6pt;
+  font-weight: bold;
+  width: 130px;
+}
+
+.custom_font_size{
+  font-size: 6pt;
+}
+
+
+
+
+#fontSizeWrapper { font-size: 16px; }
+
+#fontSize {
+  width: 100px;
+  font-size: 1em;
+  }
+
+/* ————————————————————–
+  Tree core styles
+*/
+.tree { margin: 0.1em; }
+
+.tree input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  }
+
+.tree input ~ ul { display: none; }
+
+.tree input:checked ~ ul { display: block; }
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree li {
+  line-height: 1;
+  position: relative;
+  padding: 0 0 1em 1em;
+  }
+
+/* .tree ul li { padding: 1em 0 0 1em; } */
+.tree ul li { padding: -10 0 0 0 !important; }
+
+.tree > li:last-child { padding-bottom: 0; }
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  }
+
+label.tree_label { cursor: pointer; }
+
+label.tree_label:hover { color: #666; }
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 0em 0 -2em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.5em;
+  content: '-';
+  text-align: center;
+  line-height: .5em;
+  }
+
+:checked ~ label.tree_label:before { content: '+'; }
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  border-left: 1px solid #777;
+  content: "";
+  }
+
+.custom_header_border{
+  border-bottom: 1pt solid
+}
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+  border-radius: 0 0 0 .3em;
+  content: '';
+  }
+
+label.tree_label:after { border-bottom: 0; }
+
+:checked ~ label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0em;
+  height: auto;
+  }
+
+.tree li:last-child:before {
+  height: 1em;
+  bottom: auto;
+  }
+
+.tree > li:last-child:before { display: none; }
+
+.tree_custom {
+  display: block;
+  background: #eee;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+
+.text_align_left{
+  text-align: left;
+}
+
+.text_align_center{
+  text-align: center;
+}
+
+.font_weight_bold{
+  font-weight: bold;
+}
+
+.font_weight_lighter{
+  font-weight: lighter;
+}
+
+.font_size_7pt{
+  font-size: 7pt;
+}
+
+.font_size_9pt{
+  font-size: 9pt;
+}
+
+.font_size_10pt{
+  font-size: 10pt;
+}
+
+.font_size_14pt{
+  font-size: 14pt;
+}
+
+.custom_date_header{
+  text-align: left; font-weight: bold; font-size: 7pt;
+}
+
+.organization_logo{
+  width:1.73058in; height: 0.82131in;
+}
+
+.title_background_color{
+  background-color: #c4c4c4a6;
+}
+
+.custom_width_80px{
+  width: 80px !important;
+}
+
+.custom_width_330px{
+  width: 400px !important;
+}

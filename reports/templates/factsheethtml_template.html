@@ -1,0 +1,1061 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Report</title>
+  <meta name="description" content="">
+</head>
+
+<body style="font-family: Arial;">
+
+  <header style="border-bottom: 1pt solid">
+    <table>
+      <tr>
+        <td style="width: 80px;">
+          <img src="{{organization_logo_path}}" alt="" style="width:1.73058in; height: 0.82131in;">
+        </td>
+        <td style="width:320px; text-align: center;">
+          <table style="width: 400px;">
+            <tr>
+              <td style="text-align: center;">
+                <p1 style="text-align: center; font-weight: bold; font-size: 16pt;">{{strategy_name}}</p1>
+              </td>
+            </tr>
+            <tr>
+              <td class="orange_color" style="text-align: center; font-weight: bold;">
+                <p2 style="text-align: center">{{strategy_category}}</p2>
+              </td>
+            </tr>
+          </table>
+
+
+        </td>
+        <td style="width: 80px;">
+          <img src="{{amc_imagepath}}" alt="" style="width:1.73058in; height: 0.82131in;">
+        </td>
+      </tr>
+    </table>
+  </header>
+  <div>
+    <table class="pdf_table">
+      <tr>
+        <td class="pdf_table_td_title">
+          <p>Benchmark</p>
+        </td>
+        <td class="pdf_table_td_value">
+          <p>{{benchmark_name}}</p>
+        </td>
+        <td rowspan="4" class="orange_color" style="text-align:center; width: 100px;">
+          <table style="text-align:center; width: 100px;color: white;">
+            <tr>
+              <td>
+                <!-- <p>Fund AUM<br/>(cr.)<br/><b>20,895.49</b></p> -->
+                <p>Fund AUM</p>
+                <p>(cr.)</p>
+                <p><b>{{aum}}</b></p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="pdf_table_td_title">
+          <p>Inception Date</p>
+        </td>
+        <td class="pdf_table_td_value">
+          <p>{{inception_date}}</p>
+        </td>
+
+      </tr>
+      <tr>
+        <td class="pdf_table_td_title">
+          <p>Min Investment</p>
+        </td>
+        <td class="pdf_table_td_value">
+          <p>{{min_investment}}</p>
+        </td>
+
+      </tr>
+      <tr>
+        <td class="pdf_table_td_title">
+          <p>Expense Ratio</p>
+        </td>
+        <td class="pdf_table_td_value">
+          <p>{{exp_ratio}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="pdf_table_td_title">
+          <p>Exit Load/Lock-in</p>
+        </td>
+        <td colspan="" class="pdf_table_td_value">
+          <p>{{exit_load}}</p>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="pdf_table_td_title">
+          <p>Fees Structure</p>
+        </td>
+        <td colspan="" class="pdf_table_td_value">
+          <p>{{fees_structure}}</p>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <table class="pdf_table_container">
+            <th class="pdf_table_container_th">
+              <p>Overview</p>
+            </th>
+            <tr class="pdf_table_container_tr">
+              <td>
+                <p>{{investment_strategy}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <table style="width: 100%;">
+            <tr>
+              <td>
+                <p><b>Age:</b> {{age}} </p>
+              </td>
+              <td>
+                <p><b>As On:</b> {{transaction_date}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <table class="pdf_table_container" style="border: none">
+            <th class="pdf_table_container_th" style="border: none">
+              <p>Fund Manager Detail</p>
+            </th>
+
+            {% for item in fundmanager_details %}
+            <tr>
+              <td class="bold_p">
+                <p>{{item.fund_manager_name}}</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p><i>
+                  {{item.fund_manager_designation}}
+                </i></p>
+              </td>
+            </tr>
+            <tr class="pdf_table_container_tr" style="border: none">
+              <td>
+                <p>
+                  {% if item.fund_manager_desc is not none %}   
+                  {{item.fund_manager_desc}}
+                  {% endif %}
+                  </p>
+              </td>
+            </tr>
+            {% endfor %}
+
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <table class="pdf_table_container">
+            <th class="pdf_table_container_th" colspan="9">
+              <p>Performance</p>
+            </th>
+            <tr>
+              <td class="bold_p pdf_table_container_td">
+                <p>Trailing Returns %</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>1 Month</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>3 Months</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>6 Months</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>1 Year</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>3 Years</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>5 Years</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>10 Years</p>
+              </td>
+              <td class="bold_p pdf_table_container_td">
+                <p>Since Inception</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold_p pdf_table_container_td">
+                <p>Fund</p>
+              </td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_1m if performance_data.scheme_ret_1m is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_3m if performance_data.scheme_ret_3m is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_6m if performance_data.scheme_ret_6m is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_1y if performance_data.scheme_ret_1y is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_3y if performance_data.scheme_ret_3y is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_5y if performance_data.scheme_ret_5y is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_10y if performance_data.scheme_ret_10y is
+                not none else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.scheme_ret_ince if performance_data.scheme_ret_ince
+                is not none else 'NA'}}</td>
+            </tr>
+            {% if not is_debt %}
+            <tr>
+              <td class="bold_p pdf_table_container_td">
+                <p>Benchmark</p>
+              </td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_1m if performance_data.bm_ret_1m is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_3m if performance_data.bm_ret_3m is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_6m if performance_data.bm_ret_6m is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_1y if performance_data.bm_ret_1y is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_3y if performance_data.bm_ret_3y is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_5y if performance_data.bm_ret_5y is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_10y if performance_data.bm_ret_10y is not none
+                else 'NA'}}</td>
+              <td class="pdf_table_container_td">{{performance_data.bm_ret_ince if performance_data.bm_ret_ince is not
+                none else 'NA'}}</td>
+            </tr>
+            {% endif %}
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align:center;">
+          <img src="{{performance_chart_src}}">
+        </td>
+      </tr>
+
+      {% if is_debt %}
+      <tr class="donotbreak">
+
+        <td colspan="3">
+          <table>
+            <tr>
+              <td class="vertical_align" style="width: 220px;">
+                <table class="dataframe">
+                  <tr>
+                    <th class="table_header" colspan="2" style="width: 220px;">
+                      <p>Capital Flows</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>Commited Capital</td>
+                    <td>{{aif_commitedcapital_in_cr}}</td>
+                  </tr>
+                  <tr>
+                    <td>Drawdown Capital</td>
+                    <td>{{aif_drawdowncapital_in_cr}}</td>
+                  </tr>
+                  <tr>
+                    <td>Initial Drawdown</td>
+                    <td>{{aif_initial_drawdown}}</td>
+                  </tr>
+                  <tr>
+                    <td>Capital Returned</td>
+                    <td>{{aif_capitalreturned_in_cr}}</td>
+                  </tr>
+                  <tr>
+                    <td>Target Fund Size</td>
+                    <td>{{aif_target_fund_size_in_cr}}</td>
+                  </tr>
+                  <tr>
+                    <td>Sponsor Commitment</td>
+                    <td>{{aif_sponsor_commitment_in_cr}}</td>
+                  </tr>
+                </table>
+              </td>
+              <td class="vertical_align" style="width: 260px;">
+                <table class="dataframe">
+                  <tr>
+                    <th class="table_header" colspan="2" style="width: 260px;">
+                      <p>Basic Details</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>ISIN</td>
+                    <td>{{isin}}</td>
+                  </tr>
+                  <tr>
+                    <td>Fund Rating</td>
+                    <td>{{aif_fund_rating}}</td>
+                  </tr>
+                  <tr>
+                    <td>NRI/US Investment Allowed</td>
+                    <td>{{aif_nri_investment_allowed}}</td>
+                  </tr>
+                  <tr>
+                    <td>Currency</td>
+                    <td>{{aif_currency}}</td>
+                  </tr>
+                  <tr>
+                    <td>Fund Type</td>
+                    <td>{{fund_type}}</td>
+                  </tr>
+                  <tr>
+                    <td>NAV (US $)</td>
+                    <td>{{aif_dollar_nav}}</td>
+                  </tr>
+                  <tr>
+                    <td>Subscription Status</td>
+                    <td>{{aif_subscription_status}}</td>
+                  </tr>
+                </table>
+
+              </td>
+              <td class="vertical_align" style="width: 220px;">
+                <table class="dataframe">
+                  <tr>
+                    <th class="table_header" colspan="2" style="width: 220px;">
+                      <p>Date Information</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>Initial Closure Date</td>
+                    <td>{{aif_initialclosure_date}}</td>
+                  </tr>
+                  <tr>
+                    <td>Fund Closure Date</td>
+                    <td>{{aif_fundclosure_date}}</td>
+                  </tr>
+                  <tr>
+                    <td>Allotment Date</td>
+                    <td>{{aif_allotment_date}}</td>
+                  </tr>
+                  <tr>
+                    <td>Fund Tenure (months)</td>
+                    <td>{{aif_tenure_of_fund_in_months}}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      {% endif %}
+      <tr>
+        <td colspan="3">
+          <table>
+            {% if not hide_section_1 %}
+            <tr class={{page_break_class}}>
+              <td style="width: 220px;" class="vertical_align">
+                {{riskratio_data_html}}
+
+              </td>
+              <td style="width: 260px;" class="vertical_align" rowspan="3">
+                {% if is_debt %}
+                {{holdingsector_data_html}}
+                {% else %}
+                {{sector_data_html}}
+                {% endif %}
+
+              </td>
+              <td style="width: 220px;" class="vertical_align" rowspan="3">
+                {{topholding_data_html}}
+
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 220px;" class="vertical_align">
+                {{portfolio_characteristics_data_html}}
+
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 200px;" class="vertical_align">
+                {{composition_data_html}}
+
+              </td>
+            </tr>
+            {% if is_debt %}
+            <tr>
+              <td style="width: 220px;"  class="vertical_align" />
+              <table class="dataframe">
+                <tr>
+                  <th class="table_header" style="width: 220px;">
+                    <p>Instrument</p>
+                  </th>
+              
+                </tr>
+              </table>
+                
+              </td>
+              <td style="width: 250px;" class="vertical_align" />                
+              <table class="dataframe">
+                <tr>
+                  
+                  <th class="table_header" style="width: 250px;">
+                    <p>Instrument Rating</p>
+                  </th>
+                  
+                </tr>
+              </table>
+              </td>
+              <td style="width: 220px;" class="vertical_align">                
+                
+                <table class="dataframe">
+                  <tr>
+                    
+                    <th class="table_header" style="width: 220px;">
+                      <p>Secured/Unsecured</p>
+                    </th>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 230px;"  class="vertical_align" />
+                <!-- {{instrument_data_html}} -->
+                <img src="{{instrument_data_html}}">
+              </td>
+              <td style="width: 260px;" class="vertical_align" />                
+                <img src="{{instrumentrating_data_html}}">
+              </td>
+              <td style="width: 230px;" class="vertical_align">                
+                <img src="{{secured_unsecured_data_html}}"/>
+
+              </td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            {% if not hide_section_2 %}
+            
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <td style=" width: 190px;" class="vertical_align">
+                      {{marketcap_composition_data_html}}
+                    </td>
+                    <td style=" width: 130px;" class="vertical_align">
+                      {{riskrating_data_html}}
+                    </td>
+                    <td style=" width:150px" class="vertical_align">
+                      {{instrumenttype_data_html}}
+                    </td>
+                    <td style=" width: 250px;" class="vertical_align">
+                      {{investmentstyle_data_html1}}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+            {% if not hide_portfolio_holdings %}
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <th>
+                      <p>Increase in Exposure</p>
+                    </th>
+                    <th>
+                      <p>Decrease in Exposure</p>
+                    </th>
+                    <th>
+                      <p>New Entrants</p>
+                    </th>
+                    <th>
+                      <p>Complete Exit</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td class="vertical_align">
+                      {{increaseexposure_data_html}}
+                    </td>
+
+                    <td class="vertical_align">
+                      {{decreaseexposure_data_html}}
+                    </td>
+
+                    <td class="vertical_align">
+                      {{newentrants_data_html}}
+                    </td>
+                    <td class="vertical_align">
+                      {{completeexit_data_html}}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+            {% if not hide_performance_trend and performancetrend_data_html%}
+            {% if not is_debt %}
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <th>
+                      <p>Performance Trend</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{performancetrend_data_html}}
+                    </td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            {% if not hide_nav_movement and nav_chart_src%}
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>NAV Movement</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{nav_chart_src}}">
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+            {% endif %}
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <td>
+                      {% for item in rollingreturn_data %}
+                      <table class={{page_break_class}}>
+                        
+                        <tr>
+                          <th colspan="2">
+                            <p>{{item.RollingReturn_title}} - {{rollingreturn_type}}</p>
+                          </th>
+                        <tr>
+                          <td class="vertical_align">
+                            <table>
+                              <tr>
+                                <td class="vertical_align">
+                                  {{item.RollingReturn_data.rollingreturn_table_data_html}}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="vertical_align">
+                                  <img src="{{item.RollingReturn_data.rollingreturn_chart_src}}">
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="vertical_align">
+                            {{item.RollingReturn_data.rollingreturn_observations_table_data_html}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{item.RollingReturn_data.rollingreturn_rolling_observations_table_data_html}}
+                          </td>
+                          <td class="vertical_align">
+                            <img src="{{item.RollingReturn_data.rollingreturn_rolling_observations_chart_html}}">
+                          </td>
+                        </tr>
+                      </table>
+                      {% endfor %}
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <td>
+                      {% for item in active_rollingreturn_data %}
+                      <table class={{page_break_class}}>
+                        
+                        <tr>
+                          <th colspan="2">
+                            <p>{{item.RollingReturn_title}}</p>
+                          </th>
+                        <tr>
+                          <td class="vertical_align">
+                            <table>
+                              <tr>
+                                <td class="vertical_align">
+                                  {{item.RollingReturn_data.rollingreturn_table_data_html}}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="vertical_align">
+                                  <img src="{{item.RollingReturn_data.rollingreturn_chart_src}}">
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="vertical_align">
+                            {{item.RollingReturn_data.rollingreturn_observations_table_data_html}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{item.RollingReturn_data.rollingreturn_rolling_observations_table_data_html}}
+                          </td>
+                          <td class="vertical_align">
+                            <img src="{{item.RollingReturn_data.rollingreturn_rolling_observations_chart_html}}">
+                          </td>
+                        </tr>
+                      </table>
+                      {% endfor %}
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+
+            {% if not hide_performance_graph %}
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <th>
+                      <p>Performance</p>
+                    </th>
+                  </tr>
+                  {% for item in rollingreturn_performance_data %}
+                  <tr style="break-inside:avoid-page">
+                    <td style="width:580px;" class="vertical_align">
+                      <img src="{{item.performance_chart_html_data}}">
+                    </td>
+                    <td class="vertical_align">
+                      {{item.performance_table_html_data}}
+                    </td>
+                  </tr>
+
+                  {% endfor %}
+
+              </td>
+            </tr>
+            {% endif %}
+
+            {% if not hide_risk_volatility_measures %}
+            {% if not is_debt %}
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table>
+                  {% for item in risk_and_volatility_data %}
+                  <tr>
+                    <th>
+                      <a>{{item.title}}</a>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{item.risk_and_vol_data}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <br />
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </table>
+
+              </td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            {% if portfolio_holdings_data %}
+            {% if not hide_detailed_portfolio %}
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <th>
+                      <a>Detailed Portfolio</a>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{portfolio_holdings_data_html}}
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+            {% endif %}
+            {% endif %}      
+            
+            {% if not is_debt and not hide_trend_analysis%}
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Sector Weights</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_sector_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Instrument</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_marketcap_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Investment Style</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_investmentstyle_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Trend AUM</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_aum_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            
+            {% endif %}
+            {% if is_debt %}      
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Sector Weights</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_sector_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Instrument</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_instrument_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Instrument Style</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_instrumentstyle_historical_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class="donotbreak">
+              <td colspan="3">
+                <table style="width: 750px;">
+                  <tr>
+                    <th>
+                      <p>Trend AUM</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="{{trend_analysis_aum_data_html}}">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            {% endif %}    
+
+            
+            {% if not hide_attribution and attribution_data_html%}
+            {% if not is_debt %}
+            <tr class={{page_break_class}}>
+              <td colspan="3">
+                <table>
+                  <tr>
+                    <th colspan="2">
+                      <a>Attribution</a>
+                    </th>
+                  </tr>
+                  {% if show_attribution_benchmark %}
+                  <tr>
+                    <th colspan="2">
+                      <a>Benchmark : <b>{{attribution_benchmark_name}}</b></a>
+                    </th>
+                  </tr>
+                  {% endif %}
+                  <tr>
+                    <td colspan="2" class="vertical_align">
+                      {{attribution_data_html.attribution_summary_html_data}}
+                    </td>
+                    <br />
+                  </tr>
+                  <tr>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Alpha Generators</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_top_performers_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Alpha Detractors</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_top_detractors_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+                      <br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Overweight Stocks which were Out Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_overweight_performing_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+
+                    </td>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Overweight Stocks which were Under Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_overweight_lagging_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+                      <br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Underweight Stocks which were Under Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_underweight_lagging_html_data}}
+
+                          </td>
+                        </tr>
+                      </table>
+                      <br />
+                    </td>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Underweight Stocks which were Out Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_underweight_performing_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">BM Stocks Not Invested which were Under Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_exclusions_lagging_html_data}}
+
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">BM Stocks Not Invested which were Out Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_exclusions_performing_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Stocks Invested Outside BM which were Out Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_additions_performing_html_data}}
+
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="vertical_align">
+                      <table>
+                        <tr>
+                          <td class="vertical_align">
+                            <p class="bold_p">Stocks Invested Outside BM which were Under Performers</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="vertical_align">
+                            {{attribution_data_html.attribution_additions_lagging_html_data}}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                </table>
+
+              </td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            <tr>
+              <td class="donotbreak" colspan="3" style="width: 700px;font-size: 9px;text-align: justify;">
+                <p style="text-align: justify;">{{disclaimer_text}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+    </table>
+    </td>
+    </tr>
+    </table>
+  </div>
+
+
+</body>
+
+</html>

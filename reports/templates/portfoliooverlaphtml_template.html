@@ -1,0 +1,270 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Report</title>
+  <meta name="description" content="">
+</head>
+
+<body style="font-family: Arial;">
+  <link rel="stylesheet" href="D:\finalyca_dev\backend\src\templates\css\report.css">
+  <header>
+    <table style="width: 730px;">
+      <tr>
+        <td style="width: 80px;">
+          <img src="{{organization_logo_path}}" alt="" style="width:1.73058in; height: 0.82131in;">
+        </td>
+        <td style="text-align: center;">
+          <p><b>Portfolio Overlap</b></p>
+        </td>
+        <td style=" width: 170px;">
+          <table>
+
+            <tr>
+              <td>
+                <p style="font-size: 10pt;">Report Date - <b>{{current_date}}</b></p>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </header>
+  <div>
+    <table>
+      <tr>
+        <td colspan="2">
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <table>
+            <tr>
+              <td>
+                <div id="circle-wrapper">
+                  <div class="circle1 transparent_class bg_green">
+                    <div class="wrappertxtxcircle">
+                      <h1 class="commonstock" }">
+                        Common<br /> Stocks
+                        <br />
+                        <span>{{common_stocks}}</span>
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="circle2 transparent_class bg_accent_organge">
+                    <div class="wrappertxtxcircle2">
+                      <h1 class="pl_41px">
+                        <!-- <span>{`${Math.floor(overlapData.overlap.planwise_data[1].common_percent_to_aum_ucs)}%`}</span>
+                        <span className={styling.schemeatxt}>{`${Math.floor(overlapData.overlap.planwise_data[1].common_percent_to_aum)}%`}</span> -->
+                        <span>{{fund_b_unique_weight}}%</span>
+                        <span class="schemeatxt">{{fund_b_common_weight}}%</span>
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="circle4 transparent_class bg_accent_blue">
+                    <div class="wrappertxtxcircle3">
+                      <h1>
+                        <!-- <span>{`${Math.floor(overlapData.overlap.planwise_data[0].common_percent_to_aum_ucs)}%`}</span>
+                        <span class="schembatxt">{`${Math.floor(overlapData.overlap.planwise_data[0].common_percent_to_aum)}%`}</span> -->
+                        <span>{{fund_a_unique_weight}}%</span>
+                        <span class="schemeatxt">{{fund_a_common_weight}}%</span>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <table class="pdf_table_overlap">
+                  <tr class="pdf_table_container_tr bg_green">
+                    <td class="pdf_table_overlap_td" style="width: 145px;border-color: black;" colspan="2">
+                      <p>Common Stocks</p>
+                    </td>
+                    <!-- <td class="pdf_table_overlap_td" style="border-color: black;">
+                      <p>Portfolio Overlap(%)</p>
+                    </td> -->
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td" colspan="2">
+                      <p class="bold_p">{{common_stocks}}</p>
+                    </td>
+                    <!-- <td class="pdf_table_overlap_td">
+                      <p class="bold_p">%</p>
+                    </td> -->
+                  </tr>
+                </table>
+                <br />
+                <table class="pdf_table_overlap">
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_container_th2 bg_accent_blue" style="width: 145px;">
+                      <p>{{investor_name}}</p>
+                    </td>
+                    <td class="pdf_table_container_th2 bg_accent_organge">
+                      <p>{{fund_a_name}}</p>
+                    </td>
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td">
+                      <p>Portfolio Date</p>
+                    </td>
+                    <td class="pdf_table_overlap_td">
+                      <p>Portfolio Date</p>
+                    </td>
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td">
+                      <p class="bold_p">{{portfolio_date}}</p>
+                    </td>
+                    <td class="pdf_table_overlap_td">
+                      <p class="bold_p">{{fund_portfolio_date}}</p>
+                    </td>
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td">
+                      <p>Unique Stocks</p>
+                    </td>
+                    <td class="pdf_table_overlap_td">
+                      <p>Unique Stocks</p>
+                    </td>
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td">
+                      <p class="bold_p">{{fund_a_uncommon_securities}}</p>
+                    </td>
+                    <td class="pdf_table_overlap_td">
+                      <p class="bold_p">{{fund_b_uncommon_securities}}</p>
+                    </td>
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td">
+                      <p>Total Stocks</p>
+                    </td>
+                    <td class="pdf_table_overlap_td">
+                      <p>Total Stocks</p>
+                    </td>
+                  </tr>
+                  <tr class="pdf_table_container_tr">
+                    <td class="pdf_table_overlap_td">
+                      <p class="bold_p">{{fund_a_total_securities}}</p>
+                    </td>
+                    <td class="pdf_table_overlap_td">
+                      <p class="bold_p">{{fund_b_total_securities}}</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <br />
+          <br />
+        </td>
+      </tr>
+      
+      <tr class="donotbreak">
+        <td colspan="2">
+      <br />
+      <br />
+      {% if not is_model_overlap %}
+      <table class="pdf_table_overlap" style="width: 730px;">
+        <tr class="pdf_table_container_tr">
+          <td class="pdf_table_overlap_td" colspan="5">
+            <p class="bold_p">Trailing Returns (%)</p>  
+          </td>
+        </tr>
+        <tr class="pdf_table_container_tr">
+          <td rowspan="2" class="pdf_table_overlap_td"></td>
+          <td class="pdf_table_container_th2 bg_accent_blue" colspan="2">
+            <p>{{investor_name}}</p>
+          </td>
+          <td class="pdf_table_container_th2 bg_accent_organge" colspan="2">
+            <p>{{fund_a_name}}</p>
+          </td>
+        </tr>
+
+        <tr class="pdf_table_container_tr">
+          
+          <td class="pdf_table_overlap_td">
+            <p><b>Fund</b></p>
+          </td>
+          <td class="pdf_table_overlap_td">
+            <p><b>Fund{{benchmark_name}}</b></p>
+          </td>
+          <td class="pdf_table_overlap_td">
+            <p><b>Fund</b></p>
+          </td>
+          <td class="pdf_table_overlap_td">
+            <p><b>Fund{{benchmark_name}}</b></p>
+          </td>
+        </tr>
+        {% for item in performance_data %}
+          <tr class="pdf_table_container_tr">
+            <td class="pdf_table_overlap_td">{{item.period_label}}</td>
+            <td class="pdf_table_overlap_td">
+              <p>{{item.portfolio_return}}</p>
+            </td>
+            <td class="pdf_table_overlap_td">
+              <p>{{item.portfolio_bm_return}}</p>
+            </td>
+            <td class="pdf_table_overlap_td">
+              <p>{{item.fund_return}}</p>
+            </td>
+            <td class="pdf_table_overlap_td">
+              <p>{{item.fund_bm_return}}</p>
+            </td>
+          </tr>
+          
+        {% endfor %}
+          
+      </table>
+      <p style="font-size: 13px;"><b> *Disclaimer :-</b> The Calculations assume the client portfolio to be static during the period.</p>
+      
+      {% endif %}
+      
+    </td>
+  </tr>
+      <tr class="donotbreak">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td class="pdf_table_container_td2">
+                <p class="bold_p">Security Overlap (%)</p>
+              </td>
+              <td class="pdf_table_container_td2">
+                <p class="bold_p">Sectors Overlap (%)</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top; text-align: center;width: 350px;">
+                <img src="{{security_overlap_html}}" alt="">
+              </td>
+              <td style="vertical-align: top; text-align: center;width: 350px;">
+                <img src="{{sector_overlap_html}}" alt="">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+          
+      <br />
+          <br />
+      
+
+      <tr class="donotbreak">
+        <td class="donotbreak" colspan="5" style="width: 730px;font-size: 9px;text-align: justify;padding: 5px;">
+          <p style="text-align: justify;">{{disclaimer_text}}</p>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+</body>
+
+</html>
